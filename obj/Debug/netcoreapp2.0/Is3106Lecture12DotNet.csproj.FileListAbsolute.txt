@@ -1,0 +1,5 @@
+C:\Users\tanwk\Documents\VS2017Projects\Is3106Lecture12DotNet\Is3106Lecture12DotNet\bin\Is3106Lecture12DotNet.deps.json
+C:\Users\tanwk\Documents\VS2017Projects\Is3106Lecture12DotNet\Is3106Lecture12DotNet\bin\Is3106Lecture12DotNet.runtimeconfig.json
+C:\Users\tanwk\Documents\VS2017Projects\Is3106Lecture12DotNet\Is3106Lecture12DotNet\bin\Is3106Lecture12DotNet.runtimeconfig.dev.json
+C:\Users\tanwk\Documents\VS2017Projects\Is3106Lecture12DotNet\Is3106Lecture12DotNet\bin\Is3106Lecture12DotNet.dll
+C:\Users\tanwk\Documents\VS2017Projects\Is3106Lecture12DotNet\Is3106Lecture12DotNet\bin\Is3106Lecture12DotNet.pdb

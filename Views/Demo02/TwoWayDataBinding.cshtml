@@ -1,0 +1,73 @@
+﻿@model Is3106Lecture12DotNet.Models.Book
+
+@{
+    ViewData["Title"] = "*** IS3106 Lecture 12 DotNet :: 2 - Data Binding - Two-way Data Binding ***";
+}
+
+<h1>@ViewData["Title"]</h1>
+<h2>Demo02 > TwoWayDataBinding</h2>
+
+<form asp-action="TwoWayDataBinding">
+
+    @if (ViewData["InfoMessage"] != null)
+    {
+        <div class="infoText">@ViewData["InfoMessage"]</div>
+    }
+
+    @if (ViewData["ErrorMessage"] != null)
+    {
+        <div class="errorText">@ViewData["ErrorMessage"]</div>
+    }    
+
+    <table class="defaultTable" style="width: 100%;">
+        <tr>
+            <th style="width: 200px;">
+                <label asp-for="ID"></label>
+            </th>
+            <td>
+                <input asp-for="ID" />
+            </td>
+            <td style="width: 400px;">
+                <span asp-validation-for="ID" class="errorText"></span>
+            </td>
+        </tr>
+        <tr>
+            <th style="width: 200px;">
+                <label asp-for="Isbn"></label>
+            </th>
+            <td>
+                <input asp-for="Isbn" />
+            </td>
+            <td style="width: 400px;">
+                <span asp-validation-for="Isbn" class="errorText"></span>
+            </td>
+        </tr>
+        <tr>
+            <th style="width: 200px;">
+                <label asp-for="Title"></label>
+            </th>
+            <td>
+                <input asp-for="Title" />
+            </td>
+            <td style="width: 400px;">
+                <span asp-validation-for="Title" class="errorText"></span>
+            </td>
+        </tr>
+        <tr>
+            <th style="width: 200px;">
+                <label asp-for="Author"></label>
+            </th>
+            <td>
+                <input asp-for="Author" />
+            </td>
+            <td style="width: 400px;">
+                <span asp-validation-for="Author" class="errorText"></span>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <input type="submit" value="Create" />
+            </td>
+        </tr>
+    </table>
+</form>

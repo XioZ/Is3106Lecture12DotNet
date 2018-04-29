@@ -1,0 +1,43 @@
+﻿@model Is3106Lecture12DotNet.Models.Book
+
+@{
+    ViewData["Title"] = "*** IS3106 Lecture 12 DotNet :: 2 - Data Binding - One-way Data Binding ***";
+}
+
+<h1>@ViewData["Title"]</h1>
+<h2>Demo02 > OneWayDataBinding</h2>
+
+<table class="defaultTable" style="width: 100%;">
+    <tr>
+        <th style="width: 200px;">
+            ID
+        </th>
+        <td>
+            @Model.ID
+        </td>
+    </tr>
+    <tr>
+        <th>
+            ISBN
+        </th>
+        <td>
+            @Model.Isbn
+        </td>
+    </tr>
+    <tr>
+        <th>
+            Title
+        </th>
+        <td>
+            @Model.Title
+        </td>
+    </tr>
+    <tr>
+        <th>
+            Author
+        </th>
+        <td>
+            @Model.Author
+        </td>
+    </tr>
+</table>

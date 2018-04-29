@@ -1,0 +1,62 @@
+﻿@model Is3106Lecture12DotNet.Models.Demo02ViewModel
+
+@{
+    ViewData["Title"] = "*** IS3106 Lecture 12 DotNet :: 2 - Data Binding - View Model Binding ***";
+}
+
+<h1>@ViewData["Title"]</h1>
+<h2>Demo02 > ViewModelBinding</h2>
+
+<form asp-action="ViewModelBinding">
+    <table>
+        <tr>
+            <th>Search Books</th>
+            <td>
+                <input asp-for="SearchQuery" />
+            </td>
+            <td>
+                <input type="submit" value="Search" />
+            </td>
+        </tr>
+    </table>
+</form>
+
+<br/><br />
+
+<table class="defaultTable" style="width: 100%;">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Books[0].ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Books[0].Isbn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Books[0].Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Books[0].Author)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in Model.Books)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => book.ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => book.Isbn)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => book.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => book.Author)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

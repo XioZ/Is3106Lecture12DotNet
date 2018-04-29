@@ -1,0 +1,34 @@
+﻿@model Is3106Lecture12DotNet.Models.Demo01ViewModel
+
+@{
+    ViewData["Title"] = "*** IS3106 Lecture 12 DotNet :: 1 - Session State - Integer Counter ***";
+}
+
+<h1>@ViewData["Title"]</h1>
+<h2>Demo01 > IntegerCounter</h2>
+
+<form asp-action="IntegerCounter">
+    <table>
+        <tr>
+            <th>
+                Request Scoped Counter
+            </th>
+            <td>
+                @Model.RequestScopedCounter
+            </td>
+        </tr>
+        <tr>
+            <th>
+                Session Scoped Counter
+            </th>
+            <td>
+                @Model.SessionScopedCounter
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Increment Counter" />
+            </td>
+        </tr>
+    </table>
+</form>

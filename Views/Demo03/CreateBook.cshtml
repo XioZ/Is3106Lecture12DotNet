@@ -1,0 +1,63 @@
+﻿
+@model ServiceReference1.book
+
+@{
+    ViewData["Title"] = "*** IS3106 Lecture 12 DotNet :: 3 - SOAP Web Service - Create Book ***";
+}
+
+<h1>@ViewData["Title"]</h1>
+<h2>Demo03 > Create Book</h2>
+
+<form asp-action="CreateBook">
+
+    @if (ViewData["InfoMessage"] != null)
+    {
+        <div class="infoText">@ViewData["InfoMessage"]</div>
+    }
+
+    @if (ViewData["ErrorMessage"] != null)
+    {
+        <div class="errorText">@ViewData["ErrorMessage"]</div>
+    }
+
+    <table class="defaultTable" style="width: 100%;">        
+        <tr>
+            <th style="width: 200px;">
+                ISBN
+            </th>
+            <td>
+                <input asp-for="isbn" />
+            </td>
+            <td style="width: 400px;">
+                <span asp-validation-for="isbn" class="errorText"></span>
+            </td>
+        </tr>
+        <tr>
+            <th style="width: 200px;">
+                Title
+            </th>
+            <td>
+                <input asp-for="title" />
+            </td>
+            <td style="width: 400px;">
+                <span asp-validation-for="title" class="errorText"></span>
+            </td>
+        </tr>
+        <tr>
+            <th style="width: 200px;">
+                Author
+            </th>
+            <td>
+                <input asp-for="author" />
+            </td>
+            <td style="width: 400px;">
+                <span asp-validation-for="author" class="errorText"></span>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </td>
+        </tr>
+    </table>
+</form>

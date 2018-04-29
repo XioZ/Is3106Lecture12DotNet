@@ -1,0 +1,37 @@
+﻿@model Is3106Lecture12DotNet.Models.Demo01ViewModel
+
+@{
+    ViewData["Title"] = "*** IS3106 Lecture 12 DotNet :: 1 - Session State - String and Object ***";
+}
+
+<h1>@ViewData["Title"]</h1>
+<h2>Demo01 > StringAndObject</h2>
+
+<table>
+    <tr>
+        <th>
+            Session Scoped String
+        </th>
+        <td>
+            @Model.SessionScopedString
+        </td>
+    </tr>
+    <tr>
+        <th>
+            Session Scoped Object
+        </th>
+        <td>
+            <ul>
+                <li>@Model.SessionScopedObject.ID</li>
+                <li>@Model.SessionScopedObject.Isbn</li>
+                <li>@Model.SessionScopedObject.Title</li>
+                <li>@Model.SessionScopedObject.Author</li>
+            </ul>            
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            @Html.ActionLink("Redirect", "StringAndObjectRedirect", "Demo01")
+        </td>
+    </tr>
+</table>

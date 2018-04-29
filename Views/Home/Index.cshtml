@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "*** Welcome to IS3106 Lecture 12 DotNet ***";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<h2>Home > Index</h2>
+
+<ul>
+    <li>
+        1: Demo Session State
+        <ul>
+            <li>@Html.ActionLink("1: Integer Counter", "IntegerCounter", "Demo01")</li>
+            <li>@Html.ActionLink("1: String and Object", "StringAndObject", "Demo01")</li>
+        </ul>
+    </li>
+    <li>
+        2: Data Binding
+        <ul>
+            <li>@Html.ActionLink("2: One-way Data Binding", "OneWayDataBinding", "Demo02")</li>
+            <li>@Html.ActionLink("2: Two-way Data Binding", "TwoWayDataBinding", "Demo02")</li>
+            <li>@Html.ActionLink("2: View Model Binding", "ViewModelBinding", "Demo02")</li>
+        </ul>
+    </li>
+    <li>
+        3: SOAP Web Service
+        <ul>
+            <li>@Html.ActionLink("3: Create Book", "CreateBook", "Demo03")</li>
+            <li>@Html.ActionLink("3: View All Books", "ViewAllBooks", "Demo03")</li>
+        </ul>
+    </li>
+</ul>

@@ -1,0 +1,44 @@
+﻿
+@model Is3106Lecture12DotNet.Models.Demo03ViewModel
+
+@{
+    ViewData["Title"] = "*** IS3106 Lecture 12 DotNet :: 3 - SOAP Web Service - View Book Details ***";
+}
+
+<h1>@ViewData["Title"]</h1>
+<h2>Demo03 > ViewBookDetails</h2>
+
+<table class="defaultTable" style="width: 100%;">
+    <tr>
+        <th style="width: 200px;">
+            ID
+        </th>
+        <td>
+            @Model.SelectedBookToView.id
+        </td>
+    </tr>
+    <tr>
+        <th>
+            ISBN
+        </th>
+        <td>
+            @Model.SelectedBookToView.isbn
+        </td>
+    </tr>
+    <tr>
+        <th>
+            Title
+        </th>
+        <td>
+            @Model.SelectedBookToView.title
+        </td>
+    </tr>
+    <tr>
+        <th>
+            Author
+        </th>
+        <td>
+            @Model.SelectedBookToView.author
+        </td>
+    </tr>
+</table>

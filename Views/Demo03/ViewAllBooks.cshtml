@@ -1,0 +1,55 @@
+﻿
+@model Is3106Lecture12DotNet.Models.Demo03ViewModel
+
+@{
+    ViewData["Title"] = "*** IS3106 Lecture 12 DotNet :: 3 - SOAP Web Service - View All Books ***";
+}
+
+<h1>@ViewData["Title"]</h1>
+<h2>Demo03 > ViewAllBooks</h2>
+
+<table class="defaultTable" style="width: 100%;">
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                ISBN
+            </th>
+            <th>
+                Title
+            </th>
+            <th>
+                Author
+            </th>
+            <th>
+                Actions
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in Model.Books)
+        {
+            <tr>
+                <td>
+                    @book.id
+                </td>
+                <td>
+                    @book.isbn
+                </td>
+                <td>
+                    @book.title
+                </td>
+                <td>
+                    @book.author
+                </td>
+                <td>
+                    @Html.ActionLink("View", "ViewBookDetails", "Demo03", new { id = book.id }) |
+                    @Html.ActionLink("Update", "UpdateBook", "Demo03", new { id = book.id }) | 
+                    @Html.ActionLink("Delete", "DeleteBook", "Demo03", new { id = book.id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
